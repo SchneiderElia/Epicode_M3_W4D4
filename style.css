@@ -44,13 +44,13 @@ header a {
     display: none;
 }
 
-#lineOne {
+#lineOne, #lineTwo, #lineThree {
     display: flex;
     overflow-x: auto;
     height: 200px;
 }
 
-#image-container {
+#image-containerOne, #image-containerTwo, #image-containerThree {
     display: inline-flex;
 }
 

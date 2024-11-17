@@ -88,9 +88,10 @@ let filmCover = ["asset/1.png",
 ]
 
 /////////////////////////////////////////////////////////////////////
-/////////////// Card Template ////////////////////////////////////////
+/////////////// Card Line One ////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
-let lineOne = document.getElementById("image-container")
+
+let lineOne = document.getElementById("image-containerOne")
 
 for (let i = 0; i < filmCover.length; i++){
 
@@ -105,3 +106,70 @@ for (let i = 0; i < filmCover.length; i++){
     card.appendChild(img)
 }
 
+/////////////////////////////////////////////////////////////////////
+/////////////// Card Line Two ////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array; 
+  
+}
+let filmCoverMescolati = shuffle([...filmCover]);
+
+filmCover = shuffle(filmCover);
+
+console.log(filmCover);
+
+
+let lineTwo = document.getElementById("image-containerTwo")
+
+for (let i = 0; i < filmCover.length; i++){
+
+    let card = document.createElement("div")
+    card.classList = "card"
+    lineTwo.appendChild(card)
+
+    let img = document.createElement("img")
+    img.src = filmCover[i]
+    img.alt = "FilmCover" +  (i)
+    img.classList = "ImgCover"
+    card.appendChild(img)
+}
+
+/////////////////////////////////////////////////////////////////////
+/////////////// Card Line Three ////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array; 
+  
+}
+let filmCoverMescolati2 = shuffle([...filmCover]);
+
+filmCover = shuffle(filmCover);
+
+console.log(filmCover);
+
+
+let lineThree = document.getElementById("image-containerThree")
+
+for (let i = 0; i < filmCover.length; i++){
+
+    let card = document.createElement("div")
+    card.classList = "card"
+    lineThree.appendChild(card)
+
+    let img = document.createElement("img")
+    img.src = filmCover[i]
+    img.alt = "FilmCover" +  (i)
+    img.classList = "ImgCover"
+    card.appendChild(img)
+}
