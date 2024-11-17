@@ -63,3 +63,45 @@ bellBox.addEventListener("mouseout", () => {
   },500)
 
 });
+
+/////////////////////////////////////////////////////////////////////
+/////////////// Array Films ////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
+let filmCover = ["asset/1.png",
+                "asset/2.png",
+                "asset/3.png",
+                "asset/4.png",
+                "asset/5.png",
+                "asset/6.png",
+                "asset/7.png",
+                "asset/8.png",
+                "asset/9.png",
+                "asset/10.png",
+                "asset/11.png",
+                "asset/12.png",
+                "asset/13.png",
+                "asset/15.png",
+                "asset/16.png",
+                "asset/17.png",
+                "asset/18.png"
+]
+
+/////////////////////////////////////////////////////////////////////
+/////////////// Card Template ////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+let lineOne = document.getElementById("image-container")
+
+for (let i = 0; i < filmCover.length; i++){
+
+    let card = document.createElement("div")
+    card.classList = "card"
+    lineOne.appendChild(card)
+
+    let img = document.createElement("img")
+    img.src = filmCover[i]
+    img.alt = "FilmCover" +  (i)
+    img.classList = "ImgCover"
+    card.appendChild(img)
+}
+
