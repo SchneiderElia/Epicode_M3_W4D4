@@ -1,0 +1,48 @@
+body {
+    height: 100vh;
+}
+
+header {
+    background-color: black;
+}
+
+header div > div :last-child i {
+    color: whitesmoke;
+}
+
+header a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.nav-link {
+    color: whitesmoke;
+}
+
+.nav-link:hover {
+    color: whitesmoke;
+}
+
+.nav-link.active {
+    font-weight: 500;
+    color: red;
+}
+
+#bell:hover {
+    font-weight: 500;
+    color: red;
+}
+
+#notify {
+    width: 300px;
+    height: 600px;
+    position: absolute;
+    right: 150px;
+    top: 65px;
+    background-color: rgb(0, 0, 0); /* Colore di sfondo nero */
+    opacity: 0.5 !important;
+    display: none;
+}
+
+
+
