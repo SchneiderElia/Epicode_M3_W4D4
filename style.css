@@ -1,6 +1,14 @@
 body {
     height: 100vh;
+    background-color: #131414;
+    overflow-x: hidden;
 }
+
+
+/*---------------------------------------------------------------------*/
+/*---------------------NAvBAr -------------------------------*/
+/*---------------------------------------------------------------------*/
+
 
 header {
     background-color: black;
@@ -17,6 +25,7 @@ header a {
 
 .nav-link {
     color: whitesmoke;
+    font-size: clamp(0.875rem, 0.8304rem + 0.2381vw, 1rem);
 }
 
 .nav-link:hover {
@@ -33,22 +42,64 @@ header a {
     color: red;
 }
 
+/*---------------------------------------------------------------------*/
+/*---------------------box account e notify -------------------------------*/
+/*---------------------------------------------------------------------*/
+
 #notify {
     width: 300px;
     height: 600px;
     position: absolute;
     right: 150px;
     top: 65px;
-    background-color: rgb(0, 0, 0); /* Colore di sfondo nero */
-    opacity: 0.5 !important;
+    background-color: rgb(0, 0, 0);
     display: none;
+    z-index: 999;
+}
+
+/*---------------------------------------------------------------------*/
+/*---------------------Section film content -------------------------------*/
+/*---------------------------------------------------------------------*/
+
+#content{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: center;
+    gap: 10px;
+    
 }
 
 #lineOne, #lineTwo, #lineThree {
     display: flex;
-    overflow-x: auto;
+    width: 100%;
+   /*  overflow-x: scroll; */
     height: 200px;
+    position: relative;
+    
+    
 }
+
+/* ::-webkit-scrollbar {
+    height: 3px;
+    cursor: grab;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000000;
+    cursor: grab;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+    cursor: grab;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    cursor: grab;
+    background: #555; 
+  } */
 
 #image-containerOne, #image-containerTwo, #image-containerThree {
     display: inline-flex;
@@ -58,7 +109,8 @@ header a {
     gap: 20px;
     width: 301px;
     height: 164px; 
-    box-shadow: 1px 2px 10px  black; 
+    box-shadow: 1px 2px 10px  black;
+    border: none;
     
 }
 
@@ -66,3 +118,128 @@ header a {
 .ImgCover {
     border-radius: 7px;
 }
+
+#content h3 {
+    color: whitesmoke;
+    padding-left: 65px;
+    font-size: clamp(1.125rem, 0.9911rem + 0.7143vw, 1.5rem);
+
+}
+
+.buttonLeft {
+    display: flex;
+    height: 164px;
+    position: absolute;
+    position: sticky;
+    left:40px ;
+    background-color:rgba(0, 0, 0, 0.541);
+    color: red;
+    z-index: 999;
+    align-items: center;
+    
+}
+
+.buttonRight {
+    display: flex;
+    height: 164px;
+    position: sticky;
+    right: 0;
+    background-color:rgba(0, 0, 0, 0.541);
+    color: red;
+    z-index: 99;
+    align-items: center;
+}
+
+#lineOne:hover .buttonLeft, #lineOne:hover .buttonRight {
+  opacity: 1; 
+}
+#lineTwo:hover .buttonLeft, #lineTwo:hover .buttonRight {
+    opacity: 1; 
+  }
+
+  #lineThree:hover .buttonLeft, #lineThree:hover .buttonRight {
+    opacity: 1; 
+  }
+  
+
+.buttonLeft, .buttonRight {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+/*---------------------------------------------------------------------*/
+/*---------------------Footer-------------------------------*/
+/*---------------------------------------------------------------------*/
+
+.hello {
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 90px;
+    gap: 100px;
+}
+
+/*---------------------------------------------------------------------*/
+/*---------------------Footer-------------------------------*/
+/*---------------------------------------------------------------------*/
+
+footer a {
+    color: rgb(112, 112, 112);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/*---------------------------------------------------------------------*/
+/*---------------------Media query-------------------------------*/
+/*---------------------------------------------------------------------*/
+
+@media (max-width: 1200px) {
+    .midbar{
+        visibility: hidden;
+    }
+
+}
+
+
+
+
+@media (max-width: 576px) {
+    #content h3 {
+    padding-left: 0px;
+}
+
+}
+
+
+@media (max-width: 768px) {
+    #content h3 {
+    padding-left: 0px;
+}
+
+}
+
+
+@media (max-width: 992px) {
+    #content h3 {
+    padding-left: 35px;
+}
+
+}
+
+
+@media (max-width: 1200px) {
+
+}
+
+
+@media (max-width: 1400px) {
+
+}
+
+
